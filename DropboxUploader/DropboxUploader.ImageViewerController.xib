@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewerController" customModule="MobiquityChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="e7T-eu-wwK" id="cYD-4Z-NEs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="7eN-mb-uW0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e7T-eu-wwK">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLJ-2m-fh8">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="buttonTapped:" destination="-1" eventType="touchUpInside" id="xzz-9v-t3s"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="GLJ-2m-fh8" secondAttribute="trailing" id="DRj-Sj-Qua"/>
+                <constraint firstAttribute="trailing" secondItem="e7T-eu-wwK" secondAttribute="trailing" id="T44-ne-nqU"/>
+                <constraint firstItem="GLJ-2m-fh8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XdB-vh-kHC"/>
+                <constraint firstItem="e7T-eu-wwK" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZBe-nd-UXZ"/>
+                <constraint firstItem="GLJ-2m-fh8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="f8u-tu-BOW"/>
+                <constraint firstItem="e7T-eu-wwK" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="khn-DK-AKj"/>
+                <constraint firstAttribute="bottom" secondItem="GLJ-2m-fh8" secondAttribute="bottom" id="lee-C4-Qrr"/>
+                <constraint firstAttribute="bottom" secondItem="e7T-eu-wwK" secondAttribute="bottom" id="pDd-OU-9IV"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>

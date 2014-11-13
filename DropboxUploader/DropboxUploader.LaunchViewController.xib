@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LaunchViewController" customModule="DropboxUploader" customModuleProvider="target">
+            <connections>
+                <outlet property="launchContainer" destination="m1N-Td-drY" id="ufb-gx-IPZ"/>
+                <outlet property="loadingContainer" destination="Rb8-fd-pV4" id="4lH-z5-qnL"/>
+                <outlet property="retryContainer" destination="OYO-DZ-s6n" id="t6Q-Yv-FEi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="YGQ-Op-7Ja"/>
+                <outlet property="welcomeContainer" destination="Y53-Xa-Sk6" id="g78-vI-eun"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m1N-Td-drY" userLabel="Launch Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DropboxUploader" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kId-c2-rCX">
+                            <rect key="frame" x="20" y="163" width="440" height="43"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2014 Michael Sean Hansen. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
+                            <rect key="frame" x="20" y="439" width="440" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="kId-c2-rCX" firstAttribute="leading" secondItem="m1N-Td-drY" secondAttribute="leading" constant="20" id="L9d-UP-1fH"/>
+                        <constraint firstItem="kId-c2-rCX" firstAttribute="top" secondItem="m1N-Td-drY" secondAttribute="top" multiplier="1/3" constant="140" id="Mvt-VJ-ECF"/>
+                        <constraint firstItem="8ie-xW-0ye" firstAttribute="leading" secondItem="m1N-Td-drY" secondAttribute="leading" constant="20" id="VOD-mm-BZ8"/>
+                        <constraint firstAttribute="centerY" secondItem="kId-c2-rCX" secondAttribute="centerY" multiplier="1.3" id="dAF-bo-eRs"/>
+                        <constraint firstAttribute="trailing" secondItem="8ie-xW-0ye" secondAttribute="trailing" constant="20" id="eyR-ta-W0v"/>
+                        <constraint firstAttribute="trailing" secondItem="kId-c2-rCX" secondAttribute="trailing" constant="20" id="lSy-EQ-qld"/>
+                        <constraint firstAttribute="bottom" secondItem="8ie-xW-0ye" secondAttribute="bottom" constant="20" id="zVM-Hd-7m6"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Mvt-VJ-ECF"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-fd-pV4" userLabel="Loading Container View">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmp-dW-GuE">
+                            <rect key="frame" x="202" y="199" width="77" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="f47-UJ-Vkg">
+                            <rect key="frame" x="230" y="230" width="20" height="20"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="f47-UJ-Vkg" secondAttribute="centerX" id="MMz-vh-DfA"/>
+                        <constraint firstAttribute="centerX" secondItem="fmp-dW-GuE" secondAttribute="centerX" id="Xne-Gb-AS7"/>
+                        <constraint firstAttribute="centerX" secondItem="fmp-dW-GuE" secondAttribute="centerX" id="jhZ-ff-0UW"/>
+                        <constraint firstItem="f47-UJ-Vkg" firstAttribute="top" secondItem="fmp-dW-GuE" secondAttribute="bottom" constant="10" id="sC8-70-POR"/>
+                        <constraint firstAttribute="centerY" secondItem="f47-UJ-Vkg" secondAttribute="centerY" id="wwb-dQ-78D"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="jhZ-ff-0UW"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y53-Xa-Sk6" userLabel="Welcome Container View">
+                    <rect key="frame" x="0.0" y="143" width="480" height="194"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN6-dr-rRG">
+                            <rect key="frame" x="222" y="0.0" width="36" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="ThF-wE-bc0"/>
+                                <constraint firstAttribute="width" constant="36" id="ZLN-VM-V3N"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S43-d3-ood">
+                            <rect key="frame" x="145" y="134" width="190" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="5xp-PJ-xpX"/>
+                                <constraint firstAttribute="width" constant="190" id="r1c-rI-Ee3"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                            <state key="normal" title="Connect" image="dropbox-icon">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="connectTapped:" destination="-1" eventType="touchUpInside" id="DZy-lJ-vY1"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app let's you do some fun stuff! But first you have to connect to Dropbox." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BDr-FA-pPs">
+                            <rect key="frame" x="90" y="46" width="300" height="63"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="300" id="ULZ-br-jLT"/>
+                                <constraint firstAttribute="height" constant="63" id="kHx-BQ-D9z"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="S43-d3-ood" secondAttribute="bottom" id="1ng-ZL-hlz"/>
+                        <constraint firstAttribute="centerX" secondItem="S43-d3-ood" secondAttribute="centerX" id="5K7-6U-Gez"/>
+                        <constraint firstItem="S43-d3-ood" firstAttribute="top" secondItem="BDr-FA-pPs" secondAttribute="bottom" constant="60" id="MDf-X2-af8"/>
+                        <constraint firstItem="RN6-dr-rRG" firstAttribute="top" secondItem="Y53-Xa-Sk6" secondAttribute="top" id="OUF-EJ-fbb"/>
+                        <constraint firstItem="S43-d3-ood" firstAttribute="top" secondItem="BDr-FA-pPs" secondAttribute="bottom" constant="25" id="Ulx-I9-vuN"/>
+                        <constraint firstAttribute="centerX" secondItem="RN6-dr-rRG" secondAttribute="centerX" id="WLF-l5-vMv"/>
+                        <constraint firstAttribute="centerX" secondItem="BDr-FA-pPs" secondAttribute="centerX" id="dAN-Dr-O7r"/>
+                        <constraint firstItem="BDr-FA-pPs" firstAttribute="top" secondItem="RN6-dr-rRG" secondAttribute="bottom" constant="10" id="eBX-11-m63"/>
+                        <constraint firstAttribute="centerY" secondItem="BDr-FA-pPs" secondAttribute="centerY" id="zge-kV-vug"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="zge-kV-vug"/>
+                            <exclude reference="MDf-X2-af8"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view hidden="YES" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OYO-DZ-s6n" userLabel="Retry Container View">
+                    <rect key="frame" x="0.0" y="180" width="480" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-kE-LdE">
+                            <rect key="frame" x="190" y="60" width="100" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="HWa-hV-mId"/>
+                                <constraint firstAttribute="width" constant="100" id="Hcb-J0-LTA"/>
+                                <constraint firstAttribute="height" constant="60" id="VfE-A5-9gf"/>
+                                <constraint firstAttribute="width" constant="190" id="dlT-ch-6fd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="Retry">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <integer key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="HWa-hV-mId"/>
+                                    <exclude reference="dlT-ch-6fd"/>
+                                </mask>
+                            </variation>
+                            <connections>
+                                <action selector="retryTapped:" destination="-1" eventType="touchUpInside" id="fnu-Mt-1qT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="There was an error connecting to Dropbox. Please try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAh-NQ-UHu">
+                            <rect key="frame" x="80" y="0.0" width="320" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="63" id="5lL-zT-3GC"/>
+                                <constraint firstAttribute="width" constant="300" id="ggQ-Ph-ilp"/>
+                                <constraint firstAttribute="height" constant="50" id="mZX-jp-7dZ"/>
+                                <constraint firstAttribute="width" constant="320" id="yae-tJ-W0h"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="5lL-zT-3GC"/>
+                                    <exclude reference="ggQ-Ph-ilp"/>
+                                </mask>
+                            </variation>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="jAh-NQ-UHu" secondAttribute="centerX" id="1MK-4B-C14"/>
+                        <constraint firstAttribute="centerX" secondItem="uX1-kE-LdE" secondAttribute="centerX" id="czn-kv-0OF"/>
+                        <constraint firstAttribute="bottom" secondItem="uX1-kE-LdE" secondAttribute="bottom" id="de0-Kt-pdo"/>
+                        <constraint firstItem="jAh-NQ-UHu" firstAttribute="top" secondItem="OYO-DZ-s6n" secondAttribute="top" id="gMd-e1-vrH"/>
+                        <constraint firstItem="uX1-kE-LdE" firstAttribute="top" secondItem="jAh-NQ-UHu" secondAttribute="bottom" constant="10" id="oao-Wj-bf4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="m1N-Td-drY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AWi-z0-fox"/>
+                <constraint firstItem="Y53-Xa-Sk6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CRr-ru-b5J"/>
+                <constraint firstAttribute="trailing" secondItem="m1N-Td-drY" secondAttribute="trailing" id="EQD-dS-yAm"/>
+                <constraint firstItem="OYO-DZ-s6n" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JzB-JZ-8nW"/>
+                <constraint firstAttribute="bottom" secondItem="Y53-Xa-Sk6" secondAttribute="bottom" id="MCK-d1-H1g"/>
+                <constraint firstAttribute="trailing" secondItem="OYO-DZ-s6n" secondAttribute="trailing" id="POH-jB-xHl"/>
+                <constraint firstItem="Rb8-fd-pV4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PP3-Ck-tHR"/>
+                <constraint firstItem="Y53-Xa-Sk6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ScI-Wp-IlC"/>
+                <constraint firstItem="m1N-Td-drY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Yfb-rH-iL2"/>
+                <constraint firstAttribute="trailing" secondItem="Y53-Xa-Sk6" secondAttribute="trailing" id="ZRl-YM-u3W"/>
+                <constraint firstAttribute="bottom" secondItem="Rb8-fd-pV4" secondAttribute="bottom" id="ehr-z3-0vx"/>
+                <constraint firstItem="Rb8-fd-pV4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iGT-AS-JL6"/>
+                <constraint firstAttribute="centerY" secondItem="OYO-DZ-s6n" secondAttribute="centerY" id="ku4-vL-Wyl"/>
+                <constraint firstAttribute="bottom" secondItem="m1N-Td-drY" secondAttribute="bottom" id="ryM-Tj-976"/>
+                <constraint firstAttribute="trailing" secondItem="Rb8-fd-pV4" secondAttribute="trailing" id="tSM-uy-PTW"/>
+                <constraint firstAttribute="centerY" secondItem="Y53-Xa-Sk6" secondAttribute="centerY" id="vLG-J1-l6k"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="MCK-d1-H1g"/>
+                    <exclude reference="ScI-Wp-IlC"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="548" y="455"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="dropbox-icon" width="50" height="46"/>
+    </resources>
+</document>
